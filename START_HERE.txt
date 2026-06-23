@@ -1,0 +1,173 @@
+╔═══════════════════════════════════════════════════════════════════════════╗
+║                                                                           ║
+║       ETHEREUM CALLDATA ANALYSIS TOOL - START HERE                       ║
+║                                                                           ║
+╚═══════════════════════════════════════════════════════════════════════════╝
+
+
+👋 WELCOME!
+
+You have a complete, production-ready Go application that analyzes
+Ethereum smart contract function calls and their calldata sizes.
+
+
+⚡ QUICK START (Total time: ~20 minutes)
+
+1. Get Etherscan API key (5 min)
+   → Visit: https://etherscan.io/apis
+   → Create account / sign in
+   → Generate API key
+   → Copy it
+
+2. Create config file (5 min)
+   → Run: cp config.example.json config.json
+   → Edit config.json
+   → Paste your API key
+   → Add your contract addresses and function selectors
+
+3. Find function selectors (5 min)
+   → Visit: https://www.4byte.directory/
+   → Search for your functions
+   → Copy the 4-byte selectors
+
+4. Run analysis (<1 min)
+   → ./eth-analysis -config config.json -output text
+   → See your results!
+
+
+📖 DOCUMENTATION FILES (read in order)
+
+1. INDEX.md
+   • Quick reference guide
+   • File structure overview
+   • Command cheat sheet
+
+2. SETUP.md
+   • Detailed setup walkthrough
+   • Multiple config format examples
+   • How to find function selectors
+
+3. README.md
+   • Full feature documentation
+   • Input/output format details
+   • Troubleshooting guide
+
+4. ARCHITECTURE.md
+   • How the tool works
+   • Data flow diagram
+   • Technical details
+
+
+🔧 WHAT YOU HAVE
+
+✓ eth-analysis           Pre-compiled binary (9.5 MB)
+✓ main.go               CLI parsing & config loading
+✓ analyzer.go           Etherscan API & statistics
+✓ 5x example configs    (JSON, YAML, TOML, CSV, TXT)
+✓ Full documentation    (5 markdown files)
+
+
+🎯 WHAT IT DOES
+
+1. Reads your contract list (addresses + function selectors)
+2. Fetches transaction data from Etherscan API
+3. Filters by function and extracts calldata sizes
+4. Calculates statistics:
+   • Count (number of calls)
+   • Min/Max (smallest/largest calldata)
+   • Mean (average size)
+   • Median (middle value)
+   • Mode (most common size)
+5. Outputs results (JSON, CSV, or text table)
+
+Time to analyze: ~5-60 seconds (depends on contracts & time range)
+
+
+💡 EXAMPLE WORKFLOW
+
+$ cp config.example.json config.json
+$ vim config.json    # Add your API key and contracts
+$ ./eth-analysis -config config.json -output text
+
+Output:
+=== Uniswap V3 ===
+Function          Count    Min   Max    Mean    Median  Mode
+exactInputSingle  4521     68    2048   512.30  512.00  512
+
+
+📊 CONFIGURATION FORMATS
+
+All these work identically - pick your favorite:
+
+• JSON   (config.example.json)    ← Recommended
+• YAML   (config.example.yml)
+• TOML   (config.example.toml)
+• CSV    (config.example.csv)
+• TXT    (config.example.txt)
+
+
+⏱️ TIMELINE
+
+Get API key:           5 min
+Create config:         5 min
+Find selectors:        5 min
+First analysis:        < 1 min
+─────────────────────────────
+Total:                 ~15 min
+
+
+❓ COMMON QUESTIONS
+
+Q: How do I find function selectors?
+A: Visit https://www.4byte.directory/ and search
+
+Q: Which config format should I use?
+A: JSON is easiest, but all work identically
+
+Q: How long does analysis take?
+A: Single contract/week: ~5-15 seconds
+   Multiple contracts/month: ~30-60 seconds
+
+Q: Can I analyze past data?
+A: Yes, set days_back to any value (1-30+ days)
+
+Q: What's the output format?
+A: JSON (programmatic), CSV (spreadsheet), or text (readable)
+
+Q: Is my API key safe?
+A: Yes, .gitignore prevents committing it
+
+Q: What if I need help?
+A: Check README.md or SETUP.md
+
+
+🚀 NEXT STEPS
+
+1. Read INDEX.md (2 min overview)
+2. Read SETUP.md (step-by-step guide)
+3. Get your Etherscan API key
+4. Create config.json
+5. Run: ./eth-analysis -config config.json -output text
+6. Celebrate! 🎉
+
+
+📞 SUPPORT
+
+All documentation is in this directory:
+• Getting started? → SETUP.md
+• How it works? → ARCHITECTURE.md
+• Need help? → README.md
+• Command reference? → INDEX.md
+
+
+═══════════════════════════════════════════════════════════════════════════════
+
+Ready to get started?
+
+Open: INDEX.md
+
+Then: SETUP.md
+
+Then: Run the tool!
+
+═══════════════════════════════════════════════════════════════════════════════

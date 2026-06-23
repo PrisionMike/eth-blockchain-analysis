@@ -1,0 +1,7 @@
+# Format: address | contract_name | function_name | selector
+# Lines starting with # are ignored
+
+0x1111111254fb6c44bac0bed2854e76f90643097d | 1inch Router | swap | 0x7c025200
+0x1111111254fb6c44bac0bed2854e76f90643097d | 1inch Router | fillOrder | 0xd0a3b665
+0xE592427A0AEce92De3Edee1F18E0157C05861564 | Uniswap V3 SwapRouter | exactInputSingle | 0x414bf389
+0xE592427A0AEce92De3Edee1F18E0157C05861564 | Uniswap V3 SwapRouter | exactInputMultihop | 0xb3a34c4b

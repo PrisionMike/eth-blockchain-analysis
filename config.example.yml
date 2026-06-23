@@ -1,0 +1,20 @@
+etherscan_api_key: YOUR_ETHERSCAN_API_KEY
+network: mainnet
+days_back: 7
+
+contracts:
+  - address: "0x1111111254fb6c44bac0bed2854e76f90643097d"
+    name: "1inch Router"
+    functions:
+      - name: swap
+        selector: "0x7c025200"
+      - name: fillOrder
+        selector: "0xd0a3b665"
+  
+  - address: "0xE592427A0AEce92De3Edee1F18E0157C05861564"
+    name: "Uniswap V3 SwapRouter"
+    functions:
+      - name: exactInputSingle
+        selector: "0x414bf389"
+      - name: exactInputMultihop
+        selector: "0xb3a34c4b"

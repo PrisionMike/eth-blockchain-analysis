@@ -1,0 +1,30 @@
+# Binaries
+eth-analysis
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Go build cache
+.cache/
+dist/
+build/
+
+# Config files with API keys (never commit!)
+config.json
+config.yml
+config.yaml
+config.toml
+config.csv
+config.txt
+
+# Results
+*.csv
+*.json
+results/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
